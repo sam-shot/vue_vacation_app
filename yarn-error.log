@@ -1,0 +1,45 @@
+Arguments: 
+  /snap/node/7823/bin/node /snap/node/7823/bin/yarn.js add vercel
+
+PATH: 
+  /home/samdev/Desktop/ANDROID_SETUP/sdk/emulator/:/home/samdev/Desktop/ANDROID_SETUP/sdk/platform-tools:/home/samdev/Desktop/ANDROID_SETUP/sdk/cmdline-tools/latest/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/samdev/.dotnet/tools:/home/samdev/.pub-cache/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.18.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: C0E750B2367F0000:error:1C800066:Provider routines:ossl_gcm_stream_update:cipher operation failed:../deps/openssl/openssl/providers/implementations/ciphers/ciphercommon_gcm.c:320:
+
+npm manifest: 
+  {
+    "name": "landing-page",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+      "dev": "vite --host",
+      "build": "vite build",
+      "preview": "vite preview"
+    },
+    "dependencies": {
+      "vue": "^3.3.4"
+    },
+    "devDependencies": {
+      "@vitejs/plugin-vue": "^4.4.0",
+      "autoprefixer": "^10.4.16",
+      "postcss": "^8.4.31",
+      "tailwindcss": "^3.3.5",
+      "vite": "^4.4.11"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

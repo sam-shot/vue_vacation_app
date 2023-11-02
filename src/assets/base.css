@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .darkToggle {
+        @apply bg-cyan-100 dark:bg-cyan-900 rounded-md shadow-md;
+    }
+    .textColor {
+        @apply dark:text-white text-gray-800;
+    }
+}
+
+html {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+  }
+  
