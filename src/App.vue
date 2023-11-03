@@ -39,15 +39,16 @@ const showModal = ref(false);
 <template>
   <div :class="{ dark: isDark }">
     <div
-      class="  dark:bg-gradient-to-b dark:from-[#0d232cfc] dark:to-[#09153b]  sm:w-screen  scroll-smooth bg-gradient-to-b from-cyan-50 to-blue-50 dark:text-white text-gray-800  sm:px-20">
+      class="  dark:bg-gradient-to-b dark:from-[#0d232cfc] dark:to-[#09153b]  sm:w-screen  scroll-smooth bg-gradient-to-b from-cyan-50 to-blue-50 dark:text-white text-gray-800  lg:px-20">
 
 
       <div
-        class="flex flex-row justify-between items-center py-3 sm:py-5 sm:mx-32 px-5 fixed left-0 right-0 backdrop-blur-lg z-5">
+        class="flex flex-row justify-between items-center py-3 sm:py-5 sm:px-32 px-5 fixed left-0 right-0 backdrop-blur-lg z-5">
         <span class="font-bold text-3xl">Mr. Tour</span>
-        <div class="sm:inline hidden font-semibold text-gray-700">
-          <span v-for="link in links" class="mx-1 px-4 py-2 hover:bg-gray-200 rounded-lg duration-200 ease-in">{{ link
-          }}</span>
+        <div class="lg:inline hidden font-semibold textColor">
+          <span :class="{ 'hover:text-gray-800': isDark }" v-for="link in links"
+            class="mx-1 px-4 py-2 hover:bg-gray-200  rounded-lg duration-200 ease-in">{{ link
+            }}</span>
         </div>
         <div class="inline-flex items-center">
           <button @click="isDark = !isDark"
@@ -58,7 +59,7 @@ const showModal = ref(false);
             </div>
           </button>
           <button @click="showModal = !showModal"
-            class="sm:hidden ml-4 px-2 py-1.5 rounded-lg shadow-xl  dark:bg-opacity-40 bg-opacity-40 dark:shadow-md dark:bg-cyan-950 bg-cyan-50 dark:border-00 border border-blue-100">
+            class="lg:hidden ml-4 px-2 py-1.5 rounded-lg shadow-xl  dark:bg-opacity-40 bg-opacity-40 dark:shadow-md dark:bg-cyan-950 bg-cyan-50 dark:border-00 border border-blue-100">
             <i v-if="!showModal" class="uil uil-bars text-2xl"></i>
             <i v-else class="uil uil-multiply text-2xl"></i>
           </button>
@@ -70,11 +71,9 @@ const showModal = ref(false);
       <div v-if="showModal"
         class="backdrop-blur-xl  bg-opacity-40 w-full fixed top-[4.25rem] flex flex-col justify-between p-10 pb-32 h-full">
         <div class="flex flex-col font-semibold ">
-          <span 
-          v-for="link in links" 
-          @click="showModal = false"
-          class="mx-1 px-4 py-2 hover: dark:hover:bg-cyan-900 hover:bg-cyan-100 rounded-lg duration-100 ease-in">{{ link
-          }}</span>
+          <span v-for="link in links" @click="showModal = false"
+            class="mx-1 px-4 py-2 hover: dark:hover:bg-cyan-900 hover:bg-cyan-100 rounded-lg duration-100 ease-in">{{ link
+            }}</span>
         </div>
         <button
           class="ring  ring-blue-300 dark:ring-0 rounded-lg py-3 px-8 dark:bg-teal-600 bg-black font-bold dark:text-white text-blue-50 shadow-2xl">Sign
@@ -104,7 +103,7 @@ const showModal = ref(false);
 
 
 
-    <div class="dark:bg-slate-950  w-full px-5 py-8 sm:px-20 textColor">
+    <div class="dark:bg-slate-950  w-full px-5 py-8 sm:px-20 textColor sm:grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 ">
       <div v-for="(country, index) in countries" :key="index"
         :class="country.colorF, country.colorT, country.dColorF, country.dColorT"
         class="bg-gradient-to-br  rounded-2xl p-8 mx-5 mb-7 ">
